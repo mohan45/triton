@@ -1,44 +1,57 @@
-<div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>First Name</mat-label>
-      <input matInput placeholder="firstname" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+<div class="main-container">
+  <div class="inner-container" >
+    <div class="backdrop" (click)="toggleLoginPopup()"></div>
+    <div class="login-container">
+      <div class="close-icon" (click)="toggleLoginPopup()"><i class="material-icons">clear</i></div>
+      <div class="example-container">
+        <div class="heading">Basic Details</div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="firstname" [formControl]="firstname" required>
+            <mat-error *ngIf="firstname.invalid">{{getFirstErrorMessage()}}</mat-error>
+          </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Last Name</mat-label>
-      <input matInput placeholder="lastname" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="lastname" [formControl]="lastname" required>
+            <mat-error *ngIf="lastname.invalid">{{getLastErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Email ID</mat-label>
-      <input matInput placeholder="test@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Email ID</mat-label>
+            <input matInput placeholder="test@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+          </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Your User ID</mat-label>
-      <input matInput placeholder="user id" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Your User ID</mat-label>
+            <input matInput placeholder="user id" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Phone Number</mat-label>
-      <input matInput placeholder="phone number" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="phone number" [formControl]="phone" required>
+            <mat-error *ngIf="phone.invalid">{{getPhoneErrorMessage()}}</mat-error>
+          </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Reference Code</mat-label>
+            <input matInput placeholder="Reference Code" [formControl]="reference" >
+            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+        </div>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+        <div class="button-container">
+          <button mat-raised-button type="submit" (click)="submit()">Continue</button>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
   

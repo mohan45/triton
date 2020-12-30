@@ -1,3 +1,79 @@
-.example-container .mat-form-field + .mat-form-field {
-    margin-left: 8px;
+// .example-container .mat-form-field + .mat-form-field {
+//     margin-left: 8px;
+// }
+
+.main-container{
+    font-family: sans-serif;
+    .inner-container{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;      
+        .backdrop{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background:rgba(49, 68, 146, 0.5);
+            // background: linear-gradient(-135deg, rgba(200, 80, 192, 0.52), rgba(65, 88, 208, 0.52));
+            // background:rgba(225, 225, 225, 0.8);
+            z-index: 1;
+        }
+        .login-container{
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            .close-icon{
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+                z-index: 9;
+                i{
+                    font-size: 32px;
+                }
+            }
+            .example-container .mat-form-field + .mat-form-field {
+                margin-left: 8px;
+                padding: 24px;
+            }
+            .example-container {
+                padding: 24px;
+                .heading {
+                    font-size: 16px;
+                    font-weight:bold;
+                    color:#314492;
+                }
+            }
+            .button-container{
+                padding: 12px 0;
+                text-align: center;
+                button{
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #fff;
+                    text-transform: uppercase;
+                    height: 32px;
+                    background: #314492;
+                    align-items: center;
+                    padding: 0 25px;
+                    transition: all .4s;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
 }
